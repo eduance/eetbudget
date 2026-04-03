@@ -4,6 +4,10 @@ use App\Http\Controllers\DashboardController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/u/{token}', function ($token) {
     $user = User::where('token', $token)->firstOrFail();
     session(['user_id' => $user->id]);
@@ -26,15 +30,28 @@ Route::post('/access', function (Illuminate\Http\Request $request) {
         : redirect('/intake');
 })->name('access');
 
+// Alles wat inlog-sessie nodig heeft
 Route::middleware([App\Http\Middleware\CheckUserSession::class])->group(function () {
+
+    // 1. De Intake
     Route::get('/intake', [DashboardController::class, 'intake'])->name('intake');
     Route::post('/intake', [DashboardController::class, 'storeIntake'])->name('intake.store');
 
+    // 2. De Wacht-animatie (Statische view)
+    Route::get('/calculating', function () {
+        return view('calculating');
+    })->name('calculating');
+
+    // 3. De Uitleg (Onboarding met BMR/TDEE data)
+    Route::get('/onboarding', [DashboardController::class, 'showOnboarding'])->name('onboarding');
+
+    // 4. Het Dashboard & Acties
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/entries', [DashboardController::class, 'storeEntry'])->name('entries.store');
     Route::post('/weights', [DashboardController::class, 'storeWeight'])->name('weights.store');
 });
 
+// Admin gedeelte
 Route::get('/admin/{password}', function ($password) {
     if ($password !== 'jouw-geheime-code') abort(404);
 
