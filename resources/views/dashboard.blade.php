@@ -40,30 +40,30 @@
         @csrf
 
         <button type="submit" name="points" value="1"
-                class="w-full h-28 bg-emerald-600 hover:bg-emerald-500 rounded-[2.5rem] flex items-center justify-between px-8 shadow-xl active:scale-95 transition-all border-b-8 border-emerald-800">
+                class="w-full h-32 bg-emerald-600 hover:bg-emerald-500 rounded-[2.5rem] flex items-center justify-between px-8 shadow-xl active:scale-95 transition-all border-b-8 border-emerald-800">
             <div class="text-left">
-                <span class="block text-2xl font-bold text-white tracking-tight">Licht</span>
-                <span class="text-emerald-100/60 text-[10px] font-bold uppercase tracking-widest">Snack / Drinken</span>
+                <span class="block text-3xl font-bold text-white tracking-tight">Extraatje</span>
+                <span class="text-emerald-100/70 text-xs font-bold uppercase tracking-wider italic text-[10px]">Snack, fruit of een drankje</span>
             </div>
-            <span class="text-4xl font-black bg-black/20 w-16 h-16 flex items-center justify-center rounded-2xl text-white shadow-inner">-1</span>
+            <span class="text-5xl font-black bg-black/20 w-20 h-20 flex items-center justify-center rounded-3xl text-white">-1</span>
         </button>
 
         <button type="submit" name="points" value="2"
-                class="w-full h-28 bg-indigo-600 hover:bg-indigo-500 rounded-[2.5rem] flex items-center justify-between px-8 shadow-xl active:scale-95 transition-all border-b-8 border-indigo-800">
+                class="w-full h-32 bg-indigo-600 hover:bg-indigo-500 rounded-[2.5rem] flex items-center justify-between px-8 shadow-xl active:scale-95 transition-all border-b-8 border-indigo-800">
             <div class="text-left">
-                <span class="block text-2xl font-bold text-white tracking-tight">Normaal</span>
-                <span class="text-indigo-100/60 text-[10px] font-bold uppercase tracking-widest">Standaard maaltijd</span>
+                <span class="block text-3xl font-bold text-white tracking-tight">Lichte Hap</span>
+                <span class="text-indigo-100/70 text-xs font-bold uppercase tracking-wider italic text-[10px]">Ontbijt, lunch of schaal kwark</span>
             </div>
-            <span class="text-4xl font-black bg-black/20 w-16 h-16 flex items-center justify-center rounded-2xl text-white shadow-inner">-2</span>
+            <span class="text-5xl font-black bg-black/20 w-20 h-20 flex items-center justify-center rounded-3xl text-white">-2</span>
         </button>
 
         <button type="submit" name="points" value="4"
-                class="w-full h-28 bg-slate-700 hover:bg-slate-600 rounded-[2.5rem] flex items-center justify-between px-8 shadow-xl active:scale-95 transition-all border-b-8 border-slate-900">
+                class="w-full h-32 bg-slate-700 hover:bg-slate-600 rounded-[2.5rem] flex items-center justify-between px-8 shadow-xl active:scale-95 transition-all border-b-8 border-slate-900">
             <div class="text-left">
-                <span class="block text-2xl font-bold text-white tracking-tight">Flink</span>
-                <span class="text-slate-300/60 text-[10px] font-bold uppercase tracking-widest">Grote maaltijd / Extra</span>
+                <span class="block text-3xl font-bold text-white tracking-tight">Grote Maaltijd</span>
+                <span class="text-slate-300 text-xs font-bold uppercase tracking-wider italic text-[10px]">Warm eten of een luxe lunch</span>
             </div>
-            <span class="text-4xl font-black bg-black/20 w-16 h-16 flex items-center justify-center rounded-2xl text-white shadow-inner">-4</span>
+            <span class="text-5xl font-black bg-black/20 w-20 h-20 flex items-center justify-center rounded-3xl text-white">-4</span>
         </button>
     </form>
 </main>
